@@ -1,5 +1,8 @@
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  --BackgroundCyan: hsl(180, 77%, 63%);
 }
 :root {
   --DarkCyan: hsl(180, 29%, 50%);
@@ -11,12 +14,12 @@
 .App {
   font-family: "League Spartan", sans-serif;
   font-size: 35px;
-  background-color: black;
+  --BackgroundCyan: hsl(180, 52%, 96%);
 }
 .header-img {
   width: 100%;
-  height: 120px;
-  background-color: black;
+  height: 100px;
+  background-color: hsl(180, 52%, 96%);
   color: white;
   overflow: hidden;
 }
@@ -36,11 +39,11 @@
 .job-detail {
   display: flex;
   flex-direction: row;
-  color: white;
+  /* color: white; */
   align-items: center;
 }
 .dot {
-  background-color: white;
+  /* background-color: white; */
   width: 3px;
   height: 3px;
   border-radius: 50%;
@@ -60,7 +63,7 @@
   color: white;
   /* padding: 0.4rem 0.3rem 0.2rem 0.4rem; */
   padding: 0.5rem;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   margin-right: 5px;
 }
 .featured {
@@ -79,17 +82,19 @@
 }
 .card-container {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(106, 103, 103);
-  margin: 2rem 20rem;
-  box-shadow: rgb(249, 250, 251) 5px 5px 10px 1px;
-  border-radius: 12px;
+  --LightGreyCyan: hsl(180, 31%, 95%);
+  margin: 3rem 9rem;
+  box-shadow: 0px 10px 18px -3px var(--DarkCyan);
+  border-radius: 3px;
 }
  
 .company {
-  color: white;
+  color: hsl(180, 77%, 63%);
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 .position {
   font-size: 18px;
