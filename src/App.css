@@ -1,46 +1,137 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700");
+
+:root {
+  --dark-cyan: hsl(180, 29%, 50%);
+  --light-grayish-cyan-bg: hsl(180, 52%, 96%);
+  --light-grayish-cyan-ft: hsl(180, 31%, 95%);
+  --dark-grayish-cyan: hsl(180, 8%, 52%);
+  --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+}
+
+html,
+body {
   padding: 0;
   margin: 0;
+  width: 100%;
+  min-height: 100vh;
   box-sizing: border-box;
-  --BackgroundCyan: hsl(180, 77%, 63%);
-}
-:root {
-  --DarkCyan: hsl(180, 29%, 50%);
-  --BackgroundCyan: hsl(180, 52%, 96%);
-  --LightGreyCyan: hsl(180, 31%, 95%);
-  --DarkGreyCyan: hsl(180, 8%, 52%);
-  --VeryDarkCyan: hsl(180, 14%, 20%);
-}
-.App {
+  overflow-x: hidden;
+  background-color: var(--light-grayish-cyan-bg);
   font-family: "League Spartan", sans-serif;
-  font-size: 35px;
-  --BackgroundCyan: hsl(180, 52%, 96%);
 }
-.header-img {
+
+.App {
+  width: 100%;
+  font-family: "League Spartan", sans-serif;
+  background-color: var(--LightGreyCyan);
+}
+
+header {
   width: 100%;
   height: 100px;
-  background-color: hsl(180, 52%, 96%);
-  color: white;
-  overflow: hidden;
+  top: 0;
+  right: 0;
 }
+
+.header-img {
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-cyan);
+}
+
 .img {
   width: 100%;
   height: 100%;
-  /* position: relative;
-  right: 120px; */
+}
+
+.logo-container {
+  margin-top: -2.5rem;
 }
 
 .logo {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  margin-right: 20px;
 }
+
+.description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+}
+.new {
+  background-color: var(--dark-cyan);
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  /* padding: 0.4rem 0.3rem 0.2rem 0.4rem; */
+  padding: 0.3rem 0.5rem;
+  /* margin-left: 10px; */
+  margin-right: 5px;
+}
+.featured {
+  background-color: #000;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0.3rem 0.5rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 4rem 2.5rem;
+  box-shadow: hsl(180, 29%, 50%) 0px 3px 6px;
+  border-radius: 3px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  margin-left: 2rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.company {
+  color: var(--dark-cyan);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+.position {
+  color: var(--very-dark-grayish-cyan);
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.position:hover {
+  color: var(--dark-cyan);
+}
+
 .job-detail {
   display: flex;
   flex-direction: row;
   /* color: white; */
   align-items: center;
+  margin-top: -0.75rem;
+}
+.job-detail p,
+.job-detail span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.5;
 }
 .dot {
   /* background-color: white; */
@@ -49,89 +140,43 @@
   border-radius: 50%;
   margin: 0 10px;
 }
- 
-.description {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: left;
-}
-.new {
-  background-color: black;
-  border-radius: 12px;
-  font-size: 12px;
-  color: white;
-  /* padding: 0.4rem 0.3rem 0.2rem 0.4rem; */
-  padding: 0.5rem;
-  /* margin-left: 10px; */
-  margin-right: 5px;
-}
-.featured {
-  background-color: #000;
-  color: #fff;
-  border-radius: 12px;
-  font-size: 12px;
-  padding: 0.5rem;
 
-}
-.card {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-left: 2rem;
-}
-.card-container {
-  display: flex;
-  /* flex-direction: column; */
-  align-items: center;
-  justify-content: space-between;
-  --LightGreyCyan: hsl(180, 31%, 95%);
-  margin: 3rem 9rem;
-  box-shadow: 0px 10px 18px -3px var(--DarkCyan);
-  border-radius: 3px;
-}
- 
-.company {
-  color: hsl(180, 77%, 63%);
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-.position {
-  font-size: 18px;
-  font-weight: 700;
-}
-.position:hover {
-  color: white;
-  cursor: pointer;
-}
 .description {
   margin-right: 50px;
+  margin-bottom: -1rem;
 }
 .button {
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
+  margin-left: 1.5rem;
+  margin-bottom: 2rem;
 }
 .languages-button {
-  background-color: rgb(70, 68, 68);
-  color: white;
+  background-color: var(--light-grayish-cyan-bg);
+  color: var(--dark-cyan);
   padding: 0.5rem 0.6rem;
-  border-radius: 12px;
   font-weight: 700;
   border: none;
   margin: 0 5px;
+  cursor: pointer;
 }
 .languages-button:hover {
-  background-color: rgb(22, 18, 18);
-  cursor: pointer;
+  background-color: var(--dark-cyan);
+  color: white;
 }
 .filters {
   background-color: #fff;
-  box-shadow: 0px 10px 18px -3px var(--DarkCyan);
+  box-shadow: hsl(180, 29%, 50%) 0px 3px 3px;
   border-radius: 3px;
   padding: 2rem;
-  margin: 2rem 3rem;
+  margin: 2rem 2.5rem;
+  /* width: 70%; */
+  /* margin: auto; */
   position: relative;
-  bottom: 80px;
+  /* top: 50px;
+  left: 15%; */
+  bottom: 60px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -140,6 +185,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
 }
 .clear {
   border: none;
@@ -158,10 +204,9 @@
   margin: 0 5px;
 }
 .filters-p {
-  background-color: black;
-  color: white;
-  padding: 0.4rem 0.6rem;
-  border-radius: 3px;
+  background-color: var(--light-grayish-cyan-ft);
+  color: var(--dark-cyan);
+  padding: 0.5rem 0.6rem;
   font-weight: 700;
 }
 .filters-button {
@@ -174,6 +219,43 @@
   font-weight: 700;
 }
 .filters-button:hover {
-  background-color:rgb(22, 18, 18);;
+  background-color: rgb(22, 18, 18);
   cursor: pointer;
+}
+
+@media only screen and (min-width: 1124px) {
+  .card-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3rem 9rem;
+  }
+
+  .card {
+    flex-direction: row;
+    align-items: center;
+    margin-left: 2rem;
+  }
+
+  .logo-container {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 0;
+  }
+
+  .description {
+    margin-right: 50px;
+    margin-bottom: -1rem;
+  }
+  .button {
+    margin-right: 2rem;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .filters {
+    margin: 1rem 9rem;
+  }
 }

@@ -4,7 +4,7 @@ const Job = (props) => {
   return (
     <div className="card-container">
       <div className="card">
-        <div className="logo">
+        <div className="logo-container">
           <img alt="logo" src={props.item.logo}></img>
         </div>
         <div className="content">
