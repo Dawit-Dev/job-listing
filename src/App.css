@@ -31,6 +31,7 @@ header {
   height: 100px;
   top: 0;
   right: 0;
+  margin-bottom: 4rem;
 }
 
 .header-img {
@@ -66,9 +67,7 @@ header {
   font-size: 16px;
   font-weight: 600;
   color: white;
-  /* padding: 0.4rem 0.3rem 0.2rem 0.4rem; */
   padding: 0.3rem 0.5rem;
-  /* margin-left: 10px; */
   margin-right: 5px;
 }
 .featured {
@@ -84,15 +83,14 @@ header {
   display: flex;
   flex-direction: column;
   background-color: white;
-  margin: 4rem 2.5rem;
-  box-shadow: hsl(180, 29%, 50%) 0px 3px 6px;
+  margin: 0 1.5rem 3rem 1.5rem;
+  box-shadow: var(--dark-cyan) 0px 0px 1px;
   border-radius: 3px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   margin-left: 2rem;
 }
 .content {
@@ -123,7 +121,6 @@ header {
 .job-detail {
   display: flex;
   flex-direction: row;
-  /* color: white; */
   align-items: center;
   margin-top: -0.75rem;
 }
@@ -134,7 +131,6 @@ header {
   opacity: 0.5;
 }
 .dot {
-  /* background-color: white; */
   width: 3px;
   height: 3px;
   border-radius: 50%;
@@ -146,7 +142,6 @@ header {
   margin-bottom: -1rem;
 }
 .button {
-  /* margin-right: 2rem; */
   margin-left: 1.5rem;
   margin-bottom: 2rem;
 }
@@ -165,18 +160,13 @@ header {
 }
 .filters {
   background-color: #fff;
-  box-shadow: hsl(180, 29%, 50%) 0px 3px 3px;
+  box-shadow: var(--dark-cyan) 0px 0px 1px;
   border-radius: 3px;
-  padding: 2rem;
-  margin: 2rem 2.5rem;
-  /* width: 70%; */
-  /* margin: auto; */
+  padding: 4px;
+  margin: 0 1.5rem -1.5rem 1.5rem;
   position: relative;
-  /* top: 50px;
-  left: 15%; */
-  bottom: 60px;
+  bottom: 100px;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -189,13 +179,15 @@ header {
 }
 .clear {
   border: none;
-  color: black;
+  color: var(--dark-grayish-cyan);
   font-weight: 700;
   background-color: #fff;
   font-size: 20px;
+  cursor: pointer;
 }
-.clear-button:hover {
-  border-bottom: 3px solid black;
+.clear:hover {
+  border-bottom: 2px solid var(--dark-cyan);
+  color: var(--dark-cyan);
 }
 .filters-container {
   display: flex;
@@ -228,7 +220,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 3rem 9rem;
+    margin: 2rem 9rem;
   }
 
   .card {
@@ -257,5 +249,7 @@ header {
   }
   .filters {
     margin: 1rem 9rem;
+    margin: 0 9rem -6.5rem 9rem;
+    padding: 4px 32px;
   }
 }
